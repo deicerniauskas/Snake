@@ -1,13 +1,19 @@
-package gyvunija;
+package gyvunija.app;
+
+import gyvunija.Directions;
+import gyvunija.Point;
+import gyvunija.Snake;
 
 import java.util.List;
 
-public class App {
+
+
+public class AppDebug {
 
     public static void main(String[] args) {
         Snake melvin = new Snake(10, 10);
 
-//        printmap(melvin);
+        printmap(melvin);
 
         melvin.move(Directions.DOWN);
         melvin.move(Directions.DOWN);
@@ -17,11 +23,8 @@ public class App {
 
         System.out.println();
 
-//        printmap(melvin);
+        printmap(melvin);
 
-
-//melvin.drawing();
-//    }
     }
 
     private static void printmap(Snake melvin) {
@@ -30,13 +33,11 @@ public class App {
         for (int y = 0; y < 10; y++) {
             for (int x = 0; x < 10; x++) {
 
-
                 if (notEmpty(melvin.getPoints(), x, y)) {
                     System.out.print("x");
                 } else {
                     System.out.print(".");
                 }
-
 
             }
 

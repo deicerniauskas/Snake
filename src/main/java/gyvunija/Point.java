@@ -1,17 +1,17 @@
 package gyvunija;
 
-public class Joint {
+public class Point {
 
 
     private int x;
     private int y;
 
-    public Joint(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public Joint(Joint head, Directions changeDirection) {
+    public Point(Point head, Directions changeDirection) {
         x = head.x;
         y = head.y;
 
@@ -32,9 +32,7 @@ public class Joint {
 
     }
 
-    public int getX() {
-        return x;
-    }
+    public int getX() { return x; }
 
     public void setX(int x) {
         this.x = x;
@@ -48,7 +46,7 @@ public class Joint {
         this.y = y;
     }
 
-    public Directions findDirection(Joint neck) {
+    public Directions findDirection(Point neck) {
         if (x == neck.x) {
             if (y > neck.y) {
                 return Directions.DOWN;
